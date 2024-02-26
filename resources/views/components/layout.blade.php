@@ -5,8 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>{{ $title ?? 'Page Title' }}</title>
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body>
-        {{ $slot }}
+    <body class="bg-gray-100">
+        <div class="container mx-auto my-10">
+            <div class="">
+                {{ $slot }}
+            </div>
+        </div>
     </body>
 </html>
